@@ -1,0 +1,23 @@
+<mat-card class="add-expense-card">
+  <mat-card-title>Add Expense</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="expenseForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="Expense Title" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input matInput formControlName="amount" type="number" placeholder="Amount" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Date</mat-label>
+        <input matInput formControlName="date" type="date" required>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Add Expense</button>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,27 @@
+<mat-card class="signup-card">
+  <mat-card-header>
+    <div mat-card-avatar class="signup-icon">
+      <mat-icon>person_add</mat-icon>
+    </div>
+    <mat-card-title>Create Account</mat-card-title>
+    <mat-card-subtitle>Join us! It’s quick and easy.</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup()" fxLayout="column" fxLayoutGap="16px">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required />
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required />
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" class="signup-button">Sign Up</button>
+    </form>
+  </mat-card-content>
+  <mat-card-actions fxLayout="row" fxLayoutAlign="center">
+    <button mat-button routerLink="/login">Already have an account? Log In</button>
+  </mat-card-actions>
+</mat-card>
